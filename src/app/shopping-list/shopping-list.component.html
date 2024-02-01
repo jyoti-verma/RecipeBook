@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-xs-12">
+  <app-shopping-edit></app-shopping-edit>
+</div>
+  </div>
+  <hr>
+  <div class="row ingredient-list">
+  <label>Ingredients list</label>
+</div>
+  <div class="no-items" *ngIf="ingredients.length === 0">
+ <span class="add-ingredients"> Add ingredients </span>
+</div> 
+
+  <ul class="list-group" *ngIf="ingredients.length > 0">
+  <li class="list-group-item shopping-list-item" *ngFor='let ingredient of ingredients; let i = index' (click)="onEditItem(i)">
+    <span>{{ ingredient.amount }} </span> 
+    <span>{{ ingredient.unit }} </span>
+    <span>{{ ingredient.name }}</span>
+  </li>
+  </ul>
+ 

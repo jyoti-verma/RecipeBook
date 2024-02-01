@@ -1,0 +1,16 @@
+:root{
+color-primary : #3f6063;
+color-secondary : #0f9d58;
+
+color-text-default : black;
+
+color-header-logo : #0f9d58;
+color-header-logo-shadow : #3f6063;
+color-header-active-background : #dadada73;
+
+color-auth-form-text : #365647;
+color-auth-form-text-shadow : #abbb9a;
+
+footer-background : #0f9d58;
+footer-foreground : #fcfffa;
+}

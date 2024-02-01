@@ -1,0 +1,24 @@
+<nav class="navbar navbar-default header">
+  <div class="container-fluid"> 
+    <div class="navbar-header">
+      <button class="navbar-toggle" (click)="toggleMenu()" type="button">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button><a class="logo" href="#">
+        <img class="header-img" src="./assets/logo.png" loading="lazy" alt="" height="50" width="50"/>
+        <span>Recipe Book</span>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="navBar">
+      <ul class="nav navbar-nav">
+        <li><a routerLink="/auth" routerLinkActive="active" *ngIf="!isAuthenticated"> <span>Authenticate</span></a></li>
+        <li><a routerLink="/recipes" routerLinkActive="active" *ngIf="isAuthenticated"><span>Recipes        </span></a></li>
+        <li><a routerLink="/shopping-list" routerLinkActive="active"> <span>Shopping List</span></a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="logout" *ngIf="isAuthenticated"><a (click)="onLogout()"><img class="logout" src="./assets/logout.png" loading="lazy" alt="" height="16" width="16"/><span>Logout</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

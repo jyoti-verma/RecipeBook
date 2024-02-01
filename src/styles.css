@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+.shopping-list-item span{
+    font-size: 10px !important;
+  }
+  .add-ingredients{
+    font-size: 10px !important;
+  }
+  .recipe-list-item p{
+    font-size: 10px !important;
+  }
+  .description{
+    font-size: 12px !important;
+  }
+  .Ingredients span{
+    font-size: 12px !important;
+  }
+  .Ingredients ul{
+    font-size: 15px !important;
+  }

@@ -1,0 +1,73 @@
+<div class="row">
+  <div class="col-xs-12">
+    <from [formGroup]="recipeForm">
+      <div class="row">
+        <div class="col-xs-12">
+          <button class="btn btn-success" (click)="onFormSubmit()" [disabled]="!recipeForm.valid">Save</button>
+          <button class="btn" type="button" (click)="onCancel()">Cancel</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input class="form-control" type="text" id="name" formControlName="name" placeholder="Enter recipe name..."/>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="imagePath">Image URL</label>
+            <input class="form-control" type="text" id="imagePath" formControlName="imagePath" 
+            placeholder="Enter image URL..." #imagePath/>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12"><img class="img-responsive" [src]="imagePath.value" loading="lazy" alt="" width="600" height="300"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group"></div>
+          <label for="description">Description</label>
+          <textarea class="form-control" type="text" id="description" rows="6" formControlName="description" placeholder="Enter recipe description..."></textarea>
+        </div>
+      </div>
+      <div class="row ingredients">
+        <div class="col-xs-12" formArrayName="ingredients">
+          <label>Ingredients</label>
+          <div class="row ingredients-list" [formGroupName]="i" *ngFor="let ingredientControl of controls; let i = index">
+            <div class="col-xs-2">
+              <input class="form-control" [id]='"amount-" + i' type="number" formControlName="amount"/>
+            </div>
+            <div class="col-xs-3">
+              <select class="form-control" [id]='"unit-" + i' autocomplete="off" name="unit" required="required" formControlName="unit">
+                <option *ngFor="let unit of unitOfMeasure" [value]="unit">{{ unit }}</option>
+              </select>
+            </div>
+            <div class="col-xs-5">
+              <input class="form-control" [id]='"name-" + i' type="text" formControlName="name" placeholder="Enter ingredient..."/>
+            </div>
+            <div class="col-xs-2">
+              <button class="btn btn-danger" (click)="onDeleteIngredient(i)" type="button">X</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <button class="btn btn-info add-ingredient" (click)="onAddIngredient()" type="button">Add Ingredient</button>
+        </div>
+      </div>
+      <hr/>
+      <div class="row">
+        <div class="col-xs-12">
+          <button class="btn btn-success" (click)="onFormSubmit()" [disabled]="!recipeForm.valid">Save</button>
+          <button class="btn" type="button" (click)="onCancel()">Cancel</button>
+        </div>
+      </div>
+    </from>
+  </div>
+</div>

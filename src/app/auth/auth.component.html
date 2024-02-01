@@ -1,0 +1,28 @@
+<div class="row auth">
+  <div class="col-xs-12 col-md-6 col-md-offset-3">
+    <div class="alert alert-danger error" *ngIf="error">{{ error }}</div>
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+      <div class="row text-center">
+        <h1>{{ isLoginMode ? 'Login' : 'Sign Up' }}</h1>
+      </div>
+      <button class="btn btn-success test" (click)="loginWithTestUser()" [disabled]="isLoading" *ngIf="isLoginMode">          
+        <div>Login With Test User</div>
+      </button>
+      <app-loader class="auth-loader" *ngIf="isLoading"></app-loader>
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input class="form-control" type="email" id="email" ngModel="ngModel" name="email" required="required" email="email" [disabled]="isLoading" placeholder="Enter e-mail..."/>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input class="form-control" type="password" id="password" ngModel="ngModel" name="password" required="required" minlength="6" [disabled]="isLoading" placeholder="Enter password..."/>
+      </div>
+      <div class="row buttons">
+        <button class="btn btn-success" type="submit" [disabled]="!form.valid || isLoading"> 
+          <div>{{ isLoginMode ? 'Login' : 'Sign Up' }}</div>
+        </button>
+        <button class="btn" type="button" (click)="onSwitchMode()" [disabled]="isLoading">{{ isLoginMode ? 'Go To Sign Up' : 'Go To Login' }}</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,67 @@
+@import '../../styles/colors.css';
+
+div.row.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.row.buttons button {
+  margin-right: 1.5rem;
+}
+div.row.buttons button:last-of-type {
+  margin-right: 0;
+}
+.auth {
+  border-radius: 0.5rem;
+  padding-top: 3rem;
+  height: 25rem;
+  max-width: 55rem;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+  align-content: center;
+  background-image: url("/assets/cooking-board.png");
+  background-repeat: none;
+}
+.auth form input {
+  border: 0.0625rem solid color-header-logo;
+}
+.auth form input:focus {
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 0.5rem color-auth-form-text;
+}
+.auth form h1,
+.auth form label {
+  color: color-auth-form-text;
+  text-shadow: 1px 1px color-auth-form-text-shadow;
+}
+.auth .error {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  border-radius: 0;
+}
+button.test {
+  align-self: center;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.auth-loader {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+@media (max-width: 480px) {
+  .auth {
+    padding-top: 1rem;
+    height: 25rem;
+  }
+  .auth .error {
+    font-size: 0.75rem;
+  }
+}

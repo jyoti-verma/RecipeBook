@@ -1,0 +1,9 @@
+<a class="list-group-item recipe-list-item" [routerLink]="[index]" routerLinkActive="active">
+  <div class="title">
+    <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
+    <p class="list-group-item-text small">{{ recipe.description }}</p>
+  </div>
+  <div class="image">
+    <img class="img-responsive recipe-list-img" [src]="recipe.imagePath" alt="{{ recipe.name }}" loading="lazy" height="48" width="48"/>
+  </div>
+</a>

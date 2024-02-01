@@ -1,0 +1,134 @@
+@import '../../../styles/colors.css';
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 5rem;
+  height: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.loader div {
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: color-primary;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.loader div:nth-child(1) {
+  left: 0.5rem;
+  animation: loader-animation-one 0.6s infinite;
+}
+.loader div:nth-child(2) {
+  left: 0.5rem;
+  animation: loader-animation-two 0.6s infinite;
+}
+.loader div:nth-child(3) {
+  left: 2rem;
+  animation: loader-animation-two 0.6s infinite;
+}
+.loader div:nth-child(4) {
+  left: 3.5rem;
+  animation: loader-animation-three 0.6s infinite;
+}
+@-moz-keyframes loader-animation-one {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes loader-animation-one {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-o-keyframes loader-animation-one {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes loader-animation-one {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-moz-keyframes loader-animation-three {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@-webkit-keyframes loader-animation-three {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@-o-keyframes loader-animation-three {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes loader-animation-three {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@-moz-keyframes loader-animation-two {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(1.5rem, 0);
+  }
+}
+@-webkit-keyframes loader-animation-two {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(1.5rem, 0);
+  }
+}
+@-o-keyframes loader-animation-two {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(1.5rem, 0);
+  }
+}
+@keyframes loader-animation-two {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(1.5rem, 0);
+  }
+}
+
+

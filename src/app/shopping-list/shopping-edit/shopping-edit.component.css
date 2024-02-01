@@ -1,0 +1,64 @@
+@import '../../../styles/colors.css';
+
+.row button {
+  margin-right: 0.5rem;
+}
+.row button:last-of-type {
+  margin-right: 0;
+}
+.row.add-ingredient {
+  position: relative;
+  height: 7rem;
+  margin-bottom: 1rem;
+  display: flex;
+}
+.row.add-ingredient:before {
+  position: absolute;
+  display: flex;
+  width: 95%;
+  height: 100%;
+  border: 0.125rem solid color-header-logo;
+  border-radius: 0.5rem;
+  z-index: 0;
+}
+form {
+  z-index: 1;
+}
+label {
+  margin-top: 1rem;
+}
+input,
+select {
+  border: 0.0625rem solid color-header-logo;
+}
+input:focus,
+select:focus {
+  border-color: color-header-logo-shadow;
+}
+#name {
+  width: 90%;
+}
+#amount {
+  width: 8rem;
+}
+#unit {
+  width: 9rem;
+}
+.form-group.name {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 10rem;
+  margin-right: 2rem;
+}
+@media (max-width: 767px) {
+  .row.add-ingredient {
+    margin: 0.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .row.add-ingredient::before {
+    width: 100%;
+  }
+}

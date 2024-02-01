@@ -1,0 +1,40 @@
+@import '../../../styles/colors.css';
+
+.btn-group button.recipe-detail span.caret {
+  margin-left: 0.25rem;
+}
+.btn-group a.clickable {
+  cursor: pointer;
+}
+.row.description {
+  margin: 1rem 0;
+  font-size: 0.85rem;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+.row.description > div {
+  padding: 0;
+}
+ul {
+  font-size: 0.75rem;
+  color: color-primary;
+}
+ul li.list-group-item {
+  border: none;
+  font-size: 1rem;
+  color: #000;
+}
+ul li.list-group-item::before {
+  content: "•";
+  padding-right: 0.5rem;
+  color: color-secondary;
+}
+ul li.list-group-item span {
+  font-size: 0.825rem;
+}
+img {
+  margin-top: 3rem;
+  width: auto;
+  height: auto;
+  max-width: 75%;
+}

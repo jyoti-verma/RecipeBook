@@ -1,0 +1,15 @@
+@import './colors.css';
+
+body,
+html {
+  font-size: 16px !important;
+  font-family: Open Sans, sans-serif !important;
+  overflow: hidden;
+/* override boostrap */
+}
+li span{
+  font-size: 50px !important;
+}
+button.btn-success {
+  background-color: color-secondary !important;
+}

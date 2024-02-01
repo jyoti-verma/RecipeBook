@@ -1,0 +1,9 @@
+<app-header></app-header>
+<main class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</main>
+<footer *ngIf="isTestUser"><span class="test-user">Test user recipe changes will not be saved to server</span></footer>

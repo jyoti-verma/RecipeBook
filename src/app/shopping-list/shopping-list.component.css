@@ -1,0 +1,40 @@
+@import '../../styles/colors.css';
+
+.shopping-list-item {
+  cursor: pointer;
+  max-width: 50.5rem;
+}
+.no-items {
+  font-size: 0.75rem;
+  color: #808080;
+}
+ul {
+  font-size: 0.75rem;
+  color: color-primary;
+}
+ul li.list-group-item {
+  border: none;
+  font-size: 1rem;
+  color: color-primary-text-default;
+  width: fit-content;
+  border-radius: 0.25rem;
+}
+ul li.list-group-item:hover {
+  font-weight: bold;
+  background-color: color-header-active-background;
+}
+ul li.list-group-item::before {
+  content: "•";
+  padding-right: 0.5rem;
+  color: color-secondary;
+}
+ul li.list-group-item span {
+  font-size: 0.825rem;
+}
+@media (max-width: 767px) {
+  .ingredient-list {
+    margin: 0 0.5rem;
+  }
+}
+
+

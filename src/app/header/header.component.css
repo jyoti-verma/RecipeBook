@@ -1,0 +1,92 @@
+@import '../../styles/colors.css';
+
+nav.header {
+  overflow: hidden;
+  height: 100%;
+}
+h1 {
+  color: color-primary;
+}
+ul.nav a:not(.dropdown-toggle) {
+  border-bottom: 0.25rem dotted #f8f8f8;
+  cursor: pointer;
+  transition: border 0.3s ease-in;
+}
+ul.nav a:not(.dropdown-toggle) span {
+  display: flex;
+  transition: color 0.4s ease-in-out;
+}
+ul.nav a.active {
+  background-color: color-header-active-background;
+  border-bottom-style: solid;
+  border-bottom-color: color-header-logo;
+}
+ul.nav a.active span {
+  color: color-header-logo;
+}
+#navBar.navbar-collapse {
+  transition: all 0.3s ease-in-out;
+  max-height: 25rem;
+  overflow: hidden;
+}
+#navBar.navbar-collapse.collapse {
+  max-height: 0;
+  display: block;
+}
+a.logo {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  justify-content: flex-start;
+  color: color-text-default;
+  margin: 0 1rem;
+  height: 3.125rem;
+  max-width: 13rem;
+  min-width: 13rem;
+}
+a.logo:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+a.logo img {
+  max-height: 2.5rem;
+  transform: rotate(-5deg);
+}
+a.logo span {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: color-header-logo;
+  text-shadow: 1px 1px color-header-logo-shadow;
+  margin: 0 0.5rem;
+  transform: rotate(-3deg);
+}
+@media (max-width: 20rem) {
+  a.logo {
+    min-width: 5rem;
+  }
+  a.logo img {
+    max-height: 2rem;
+  }
+  a.logo span {
+    font-size: 1rem;
+  }
+}
+li.logout {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+li.logout a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+li.logout a img.logout {
+  margin-right: 0.5rem;
+  max-width: 1rem;
+  max-height: 1rem;
+}

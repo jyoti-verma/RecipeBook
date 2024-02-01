@@ -1,0 +1,25 @@
+.row {
+  margin-top: 0.5rem;
+}
+.row button {
+  margin-right: 0.5rem;
+}
+.row button:last-of-type {
+  margin-right: 0;
+}
+.ng-invalid.ng-touched {
+  border-color: #f00;
+}
+.add-ingredient {
+  font-size: 0.75rem;
+}
+.ingredients-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 480px) {
+  .ingredients-list div {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}

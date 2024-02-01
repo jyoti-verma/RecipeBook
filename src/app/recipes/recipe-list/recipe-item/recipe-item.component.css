@@ -1,0 +1,62 @@
+@import '../../../../styles/colors.css';
+.recipe-list-item {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  min-height: 4rem;
+  max-height: 4rem;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+.recipe-list-item .list-group-item-heading,
+.recipe-list-item .list-group-item-text {
+  height: 1.5rem;
+  line-height: 1.5rem;
+  width: 70vw;
+  max-width: 22rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: pre;
+}
+.recipe-list-item .recipe-list-img {
+  max-height: 3rem;
+  max-width: 3rem;
+  border-radius: 0.25rem;
+}
+.recipe-list-item.active {
+  background: linear-gradient(to left, color-header-logo, color-secondary);
+  border-color: color-primary;
+}
+.recipe-list-item.active .list-group-item-text {
+  color: #fff;
+}
+.recipe-list-item .list-group-item-text {
+  font-size: 0.75rem;
+}
+.recipe-list-item .title,
+.recipe-list-item .image {
+  display: flex;
+}
+.recipe-list-item .title {
+  overflow: hidden;
+  flex-direction: column;
+  flex: 1;
+}
+.recipe-list-item .image {
+  flex: 0;
+}
+.recipe-list-item .image,
+.recipe-list-item .image img {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+}
+@media (max-width: 60rem) {
+  .recipe-list-item .list-group-item-heading,
+  .recipe-list-item .list-group-item-text {
+    max-width: 40rem;
+  }
+}
